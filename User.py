@@ -11,13 +11,13 @@ class User:
   def __init__(self, bit, rapporInstance):
     self.bit = bit
     self.rappor = rapporInstance
-    self.randomize()
+    self.randomizeOnce()
 
-  def randomize(self):
-    self.randomBit = self.rappor.randomizeValue(self.bit)
+  def randomizeOnce(self):
+    self.rrBit = self.rappor.permanentRandomization(self.bit)
     
-  def get(self):
-    return self.randomBit
+  def report(self):
+    return self.rappor.instantaneousRandomization(self.rrBit)
 
 if __name__ == '__main__':
   pass

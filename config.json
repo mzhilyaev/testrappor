@@ -1,9 +1,9 @@
 {
   "rrFreq": 0.5,
-  "irOneFreq": 0.5,
-  "irZeroFreq": 0.45,
+  "irOneFreq": 0.7,
+  "irZeroFreq": 0.3,
   "testRounds": 1000,
-  "totalUsers": 10000,
-  "totalSubmission": 50000,
+  "totalUsers": 500,
+  "freqCap": 20,
   "positiveFraction": 0.5
 }
