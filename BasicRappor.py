@@ -69,24 +69,6 @@ class BasicRappor:
     variance = (variancePrimeX * expectedNumber + variancePrimeY * (totalSize - expectedNumber)) / (self.oneIfTrue - self.oneIfFalse)**2
     return variance
 
-  def randomizeDictionary(self, theDict):
-    retDict = {}
-    for key, value in theDict.items():
-      retDict[key] = self.randomizeValue(value)
-    return retDict
-
-  def extractFromDictionary(self, theDict, sampleSize):
-    retDict = {}
-    for key, value in theDict.items():
-      retDict[key] = self.extractCount(value, sampleSize)
-    return retDict
-
-  def randomizeList(self, lst):
-    return [self.randomizeValue(val) for val in lst]
-
-  def extractFromList(self, lst, sampleSize):
-    return [self.extractCount(val, sampleSize) for val in lst]
-
 if __name__ == '__main__':
   bRappor = BasicRappor(0.5,1,0)
   print bRappor.randomizeList([1,1,0,0])
