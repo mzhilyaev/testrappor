@@ -14,8 +14,6 @@ class TestPreprocess(unittest.TestCase):
     ### from random variable c*f where c is chosen with probability f
     ### 0 otherwise - this models freqency cap 
     def testStepWiseBernoulli(self):
-      pass
-      return
       tests = [ 
         { "q" : 0.5, "f": 0.5 , "c": 10 },
         { "q" : 0.1, "f": 0.9 , "c": 10 },
