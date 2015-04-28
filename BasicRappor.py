@@ -51,7 +51,7 @@ class BasicRappor:
 
   def extractCount(self, observedSum, totalSize):
     return (observedSum - totalSize*self.oneIfFalse) / (self.oneIfTrue - self.oneIfFalse)
-    
+
   def variance(self, c, expectedNumber, totalSize):
     ### variable naming follows conventions in the document below
     ### signal bit products

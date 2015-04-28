@@ -21,6 +21,7 @@ def simulate(config, output=True, save=False):
   totalUsers = int(config["totalUsers"])
   freqCap = int(config["freqCap"])
   skipInstanteneousRandomizarion = False
+  doSave = config["save"] or save
 
   if (config["irOneFreq"] == 1 and config["irZeroFreq"] == 0):
     skipInstanteneousRandomizarion = True
@@ -60,7 +61,7 @@ def simulate(config, output=True, save=False):
           , basicRappor.oneIfTrue \
           , basicRappor.oneIfFalse
 
-  if (save):
+  if (doSave):
     ### make a file name
     ### make the file prefix
     filePrefix = "%d,%d,%d,%.1f,%.1f,%.1f" % (submissions \
