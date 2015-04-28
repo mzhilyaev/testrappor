@@ -54,12 +54,11 @@ def simulate(config, output=True, save=False):
 
   ### print results
   if (output):
-    print positiveUsers*freqCap \
-          , estimatedValue.mean() \
-          , sqrt(estimatedValue.variance()) \
-          , sqrt(basicRappor.variance(freqCap, positiveUsers*freqCap, submissions)) \
-          , basicRappor.oneIfTrue \
-          , basicRappor.oneIfFalse
+    print "Total reports     %d" % (totalUsers*freqCap)
+    print "Theoretical mean  %d" % (positiveUsers*freqCap)
+    print "Empirical mean    %d" % estimatedValue.mean()
+    print "Theoretical sigma %0.3f" % sqrt(basicRappor.variance(freqCap, positiveUsers*freqCap, submissions))
+    print "Empirical sigma   %0.3f" % sqrt(estimatedValue.variance())
 
   if (doSave):
     ### make a file name
